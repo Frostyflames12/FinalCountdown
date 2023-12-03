@@ -7,13 +7,6 @@ function App() {
     <>
       <Player />
       <div id="challenges">
-        {/* {challenges.map((challengeItem) => (
-          <TimerChallenge
-            key={challengeItem.level}
-            title={challengeItem.level}
-            targetTime={challengeItem.time}
-          />
-        ))} */}
         <TimerChallenge title="Easy" targetTime={1} />
         <TimerChallenge title="Not Easy" targetTime={5} />
         <TimerChallenge title="Getting tough" targetTime={10} />

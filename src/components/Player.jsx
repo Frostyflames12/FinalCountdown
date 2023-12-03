@@ -6,12 +6,16 @@ export default function Player() {
   const [playerName, setPlayerName] = useState(null);
 
   function handleClick() {
-    setPlayerName(input.current.value);
-    input.current.value = '';
+    if (input.current.value === "") {
+      setPlayerName("Unknown entity");
+    } else {
+      setPlayerName(input.current.value);
+      input.current.value = "";
+    }
   }
   return (
     <section id="player">
-      <h2>Welcome {playerName ?? 'Unknown entity'}</h2>
+      <h2>Welcome {playerName ?? "Unknown entity"}</h2>
       <p>
         <input ref={input} type="text" />
         <button onClick={handleClick}>Set Name</button>
